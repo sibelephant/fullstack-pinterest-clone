@@ -8,7 +8,7 @@ const Topbar = () => {
         <img src="/general/search.svg" alt="" />
         <input
           type="text"
-          placeholder="search"
+          placeholder="Search"
           className="flex-1 bg-transparent border-none outline-none text-[18px]"
         />
       </div>
