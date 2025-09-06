@@ -1,16 +1,14 @@
-import { Link } from "react-router"; // fix import
+import { Link } from "react-router";
+import Image from "./Image";
 
 const GallleryItem = ({ item }) => {
+  const optimizedHeight = (372 * item.height) / item.width;
   return (
     <div
       className="galleryItem group relative flex"
       style={{ gridRowEnd: `span ${Math.ceil(item.height / 100)}` }}
     >
-      <img
-        src={item.media}
-        alt=""
-        className="w-full rounded-[16px] object-cover"
-      />
+      <Image path={item.media} alt={""} w={372} h={optimizedHeight} className={`w-full rounded-[16px] object-cover`} />
 
       {/* Clickable overlay */}
       <Link
