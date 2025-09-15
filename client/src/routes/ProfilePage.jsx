@@ -1,16 +1,7 @@
 import Image from "../components/Image";
+import Gallery from "../components/Gallery";
+import Collections from "../components/Collections";
 import { useState } from "react";
-
-const mockPins = [
-  { id: 1, media: "/Pinterest-clone/pins/pin1.jpeg", height: 320 },
-  { id: 2, media: "/Pinterest-clone/pins/pin2.jpeg", height: 260 },
-  { id: 3, media: "/Pinterest-clone/pins/pin3.jpeg", height: 380 },
-  { id: 4, media: "/Pinterest-clone/pins/pin4.jpeg", height: 300 },
-  { id: 5, media: "/Pinterest-clone/pins/pin5.jpeg", height: 340 },
-  { id: 6, media: "/Pinterest-clone/pins/pin6.jpeg", height: 280 },
-  { id: 7, media: "/Pinterest-clone/pins/pin7.jpeg", height: 360 },
-  { id: 8, media: "/Pinterest-clone/pins/pin8.jpeg", height: 300 },
-];
 
 const ProfilePage = () => {
   const [activeTab, setActiveTab] = useState("saved");
@@ -71,23 +62,9 @@ const ProfilePage = () => {
         </div>
       </div>
 
-      {/* Grid */}
-      <div className="gridSection py-6">
-        <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-4 [column-fill:_balance]">
-          {/* Masonry via CSS columns */}
-          {mockPins.map((p) => (
-            <div
-              key={p.id}
-              className="mb-4 break-inside-avoid rounded-2xl overflow-hidden"
-            >
-              <Image
-                path={p.media}
-                alt="Pin"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          ))}
-        </div>
+      {/* Content */}
+      <div className="py-6">
+        {activeTab === "saved" ? <Gallery /> : <Collections />}
       </div>
     </div>
   );
