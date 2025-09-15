@@ -6,7 +6,7 @@ import CreatePage from "./routes/CreatePage.jsx";
 import PostPage from "./routes/PostPage.jsx";
 import AuthPage from "./routes/AuthPage.jsx";
 import { BrowserRouter, Route, Routes } from "react-router";
-import ProfilePage from "./ProfilePage.jsx";
+import ProfilePage from "./routes/ProfilePage.jsx";
 import SearchPage from "./routes/SearchPage.jsx";
 import MainLayout from "./routes/MainLayout.jsx";
 
