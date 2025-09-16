@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {Link} from "react-router";
 
 const UserButton = () => {
   //temp user info
@@ -21,7 +22,7 @@ const UserButton = () => {
       {open && (
         <div className="userOptions absolute right-0 top-[100%] p-2 rounded-[8px] bg-white z-99 flex flex-col text-sm shadow cursor-pointer">
           <div className="p-2 rounded-[8px] hover:bg-[#f1f1f1] text-gray-600">
-            Profile
+            <Link to={`/khalid`}>Profile</Link>
           </div>
           <div className="p-2 rounded-[8px] hover:bg-[#f1f1f1] text-gray-600">
             Settings
