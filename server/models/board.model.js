@@ -16,4 +16,4 @@ const boardSchema = new Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("Board", pinSchema);
+export default mongoose.model("Board", boardSchema);
