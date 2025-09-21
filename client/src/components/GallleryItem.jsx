@@ -8,11 +8,17 @@ const GallleryItem = ({ item }) => {
       className="galleryItem group relative flex"
       style={{ gridRowEnd: `span ${Math.ceil(item.height / 100)}` }}
     >
-      <Image path={item.media} alt={""} w={372} h={optimizedHeight} className={`w-full rounded-[16px] object-cover`} />
+      <Image
+        path={item.media}
+        alt={""}
+        w={372}
+        h={optimizedHeight}
+        className={`w-full rounded-[16px] object-cover`}
+      />
 
       {/* Clickable overlay */}
       <Link
-        to={`/pin/${item.id}`}
+        to={`/pin/${item._id || item.id}`}
         className="absolute inset-0 rounded-[16px] bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity z-10
                    pointer-events-none group-hover:pointer-events-auto"
       />
@@ -34,7 +40,7 @@ const GallleryItem = ({ item }) => {
           <img src="/general/share.svg" alt="share" />
         </button>
         <button className="p-2 rounded-full bg-white/90">
-          <img src="/general/more.svg" alt="share" />
+          <img src="/general/more.svg" alt="more" />
         </button>
       </div>
     </div>
